@@ -34,6 +34,8 @@
 
 html { scroll-behavior: smooth; }
 
+html, body { max-width: 100%; overflow-x: hidden; }
+
 body {
   margin: 0;
   background: var(--parchment);
@@ -44,7 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img, svg { max-width: 100%; display: block; height: auto; }
 
 a { color: inherit; }
 
@@ -162,7 +164,11 @@ a { color: inherit; }
   grid-template-columns: 1.1fr 0.9fr;
   gap: 56px;
   align-items: center;
+  min-width: 0;
 }
+
+.hero-copy,
+.hero-visual { min-width: 0; }
 
 .hero h1 {
   font-family: var(--font-display);
@@ -196,6 +202,13 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   min-height: 360px;
+  min-width: 0;
+}
+
+.hero-visual svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
 }
 
 .hero-note {
