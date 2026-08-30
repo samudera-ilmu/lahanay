@@ -3,263 +3,584 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lahanay — Madu Klanceng Asli, Langsung dari Sarangnya</title>
-<meta name="description" content="Lahanay menjual madu klanceng (meliponin) asli, dipanen langsung dari sarang lebah tanpa sengat. Rasa asam-manis khas, tanpa campuran, tanpa pemanasan.">
-
-<!-- Ganti dengan domain asli setelah live di Cloudflare Pages -->
-<link rel="canonical" href="https://lahanay.pages.dev/">
-<meta property="og:title" content="Lahanay — Madu Klanceng Asli">
-<meta property="og:description" content="Madu klanceng asli, dipanen langsung dari sarang lebah tanpa sengat (Trigona).">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://lahanay.pages.dev/">
-<meta property="og:image" content="https://lahanay.pages.dev/images/og-lahanay.jpg">
+<title>HoneyDrop — Madu Murni Kelulut &amp; Meliponini Asli</title>
+<meta name="description" content="Madu murni kelulut (trigona) asli dari peternak lebah hutan tropis. Rasa asam-manis khas, tanpa pemanasan, tanpa campuran. COD tersedia se-Indonesia.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="/" class="brand">Laha<em>nay</em></a>
-    <nav class="nav-links">
-      <a href="#produk">Produk</a>
-      <a href="#kenapa">Kenapa Klanceng</a>
-      <a href="#testimoni">Testimoni</a>
-      <a href="/artikel/">Artikel</a>
-      <a href="https://wa.me/6289621566266?text=Halo%20Lahanay%2C%20saya%20mau%20tanya-tanya%20soal%20madu%20klanceng" class="btn btn-ghost">Chat WA</a>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: { 900:'#1B2A18', 800:'#233420', 700:'#33472E', 600:'#425A3B' },
+          honey:  { 600:'#B07F1E', 500:'#CB9A2D', 400:'#DDB349', 300:'#E9C978' },
+          ivory:  { 100:'#FBF3DE', 200:'#F7EFDD', 300:'#F1E6C9' },
+          rust:   { 600:'#B23A2E', 700:'#98301F' },
+          char:   { 900:'#241D12', 700:'#4A3720' },
+        },
+        fontFamily: {
+          display: ['Fraunces','serif'],
+          body: ['"Plus Jakarta Sans"','sans-serif'],
+          mono: ['"Space Mono"','monospace'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ :root{ scroll-behavior:auto; } .reveal{opacity:1!important; transform:none!important; transition:none!important;} }
+
+  body{ background:#FBF3DE; }
+
+  .hex{ clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+
+  .hex-grid{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='96' viewBox='0 0 84 96'%3E%3Cpath d='M42 0 L84 24 L84 72 L42 96 L0 72 L0 24 Z' fill='none' stroke='%23E9C978' stroke-opacity='0.16' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-size: 84px 96px;
+  }
+  .hex-grid-dark{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='96' viewBox='0 0 84 96'%3E%3Cpath d='M42 0 L84 24 L84 72 L42 96 L0 72 L0 24 Z' fill='none' stroke='%23DDB349' stroke-opacity='0.12' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-size: 84px 96px;
+  }
+
+  .drip-divider{ height:34px; width:100%; display:block; }
+
+  .eyebrow{ letter-spacing:.14em; }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+  details.faq[open] summary .chev{ transform:rotate(180deg); }
+  summary::-webkit-details-marker{ display:none; }
+
+  .stripe-strike{ position:relative; }
+  .stripe-strike::after{ content:''; position:absolute; left:-4%; right:-4%; top:50%; height:2px; background:#98301F; transform:rotate(-4deg); }
+
+  input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible{
+    outline: 2px solid #B07F1E; outline-offset: 2px;
+  }
+</style>
+</head>
+
+<body class="font-body text-char-900 antialiased">
+
+<!-- Announcement bar -->
+<div class="bg-forest-900 text-ivory-200 text-xs sm:text-sm font-medium">
+  <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-center gap-2 text-center">
+    <span>🍯</span>
+    <p>Promo minggu ini — Gratis ongkir seluruh Indonesia &amp; <span class="text-honey-400 font-semibold">COD tersedia</span> di kota-kota terpilih</p>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-ivory-100/90 backdrop-blur border-b border-honey-500/20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center">
+        <span class="text-honey-400 text-sm">🐝</span>
+      </span>
+      <span class="font-display font-semibold text-lg tracking-tight text-forest-900">HoneyDrop</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-char-700">
+      <a href="#manfaat" class="hover:text-honey-600 transition-colors">Manfaat</a>
+      <a href="#beda" class="hover:text-honey-600 transition-colors">Kenapa Kelulut</a>
+      <a href="#testimoni" class="hover:text-honey-600 transition-colors">Testimoni</a>
+      <a href="#paket" class="hover:text-honey-600 transition-colors">Paket Harga</a>
+      <a href="#faq" class="hover:text-honey-600 transition-colors">FAQ</a>
     </nav>
+    <a href="#pesan" class="bg-rust-600 hover:bg-rust-700 transition-colors text-white text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full shadow-sm">
+      Pesan Sekarang
+    </a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-copy">
-      <span class="eyebrow">Madu Klanceng Asli — Dari Sarang, Bukan Dari Pabrik</span>
-      <h1>Madu asam-manis dari lebah yang <span class="accent">tak pernah menyengat.</span></h1>
-      <p class="lede">Lahanay memanen madu klanceng (meliponin) langsung dari sarang lebah Trigona — lebah kecil tanpa sengat yang membangun rumahnya dari resin, bukan lilin biasa. Hasilnya: madu lebih kental, lebih asam-segar, dan jumlahnya memang tak banyak.</p>
-      <div class="cta-row">
-        <a href="https://wa.me/6289621566266?text=Halo%20Lahanay%2C%20saya%20mau%20pesan%20madu%20klanceng" class="btn btn-primary">Pesan via WhatsApp</a>
-        <a href="#produk" class="btn btn-ghost">Lihat Pilihan Kemasan</a>
+<!-- HERO -->
+<section id="top" class="relative bg-forest-900 hex-grid-dark overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-20 sm:pt-20 sm:pb-28 grid lg:grid-cols-2 gap-14 items-center relative z-10">
+    <div>
+      <span class="eyebrow inline-flex items-center gap-2 text-honey-400 text-xs font-mono uppercase bg-honey-500/10 border border-honey-500/30 rounded-full px-3 py-1.5">
+        100% Murni · Tanpa Campuran
+      </span>
+      <h1 class="font-display font-semibold text-4xl sm:text-5xl lg:text-[3.3rem] leading-[1.1] text-ivory-100 mt-6">
+        Madu kelulut asli, dipanen langsung dari sarang lebah <span class="text-honey-400 italic font-medium">trigona</span> hutan tropis.
+      </h1>
+      <p class="text-ivory-200/80 text-base sm:text-lg mt-6 max-w-lg leading-relaxed">
+        Rasa asam-manis khas yang tidak bisa ditiru madu biasa. Diproses tanpa pemanasan agar enzim dan nutrisi alaminya tetap utuh sampai ke tangan Anda.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#pesan" class="text-center bg-rust-600 hover:bg-rust-700 transition-colors text-white font-semibold px-7 py-3.5 rounded-full shadow-lg shadow-rust-600/20">
+          Pesan Sekarang — Bisa COD
+        </a>
+        <a href="#beda" class="text-center border border-ivory-100/25 hover:border-honey-400 text-ivory-100 font-semibold px-7 py-3.5 rounded-full transition-colors">
+          Lihat Keunggulannya
+        </a>
+      </div>
+      <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-ivory-200/70 text-xs sm:text-sm font-medium">
+        <span class="flex items-center gap-1.5">✅ Halal MUI</span>
+        <span class="flex items-center gap-1.5">✅ Terdaftar BPOM</span>
+        <span class="flex items-center gap-1.5">✅ Garansi Uang Kembali</span>
       </div>
     </div>
 
-    <div class="hero-visual">
-      <!-- SIGNATURE: sarang klanceng punya pintu masuk berbentuk terowongan spiral dari resin/propolis -->
-      <svg width="360" height="360" viewBox="0 0 420 420" role="img" aria-label="Ilustrasi terowongan spiral pintu masuk sarang lebah klanceng">
-        <defs>
-          <path id="orbitpath" d="M 210 60 A 150 150 0 1 1 209.9 60" fill="none"/>
-        </defs>
-        <circle cx="210" cy="210" r="190" fill="none" stroke="#4a3524" stroke-width="1"/>
-
-        <g class="nest-orbit">
-          <!-- spiral tunnel rings, tapering -->
-          <ellipse cx="210" cy="210" rx="150" ry="120" fill="none" stroke="#b8752e" stroke-width="2" opacity="0.9"/>
-          <ellipse cx="210" cy="212" rx="128" ry="100" fill="none" stroke="#b8752e" stroke-width="2" opacity="0.75"/>
-          <ellipse cx="210" cy="214" rx="106" ry="82" fill="none" stroke="#d99a52" stroke-width="2" opacity="0.65"/>
-          <ellipse cx="210" cy="216" rx="84" ry="64" fill="none" stroke="#d99a52" stroke-width="2" opacity="0.55"/>
-          <ellipse cx="210" cy="218" rx="62" ry="47" fill="none" stroke="#b8752e" stroke-width="2" opacity="0.5"/>
-          <ellipse cx="210" cy="220" rx="40" ry="30" fill="none" stroke="#8f5620" stroke-width="2" opacity="0.6"/>
-        </g>
-
-        <ellipse cx="210" cy="222" rx="20" ry="15" fill="#241a12" stroke="#d99a52" stroke-width="1.5"/>
-
-        <circle class="bee-dot" r="4" fill="#f3ecdd" style="offset-path: path('M 210 60 A 150 150 0 1 1 209.9 60'); offset-rotate: 0deg;"/>
-      </svg>
-      <p class="hero-note">Pintu masuk sarang klanceng berbentuk terowongan spiral dari resin — ciri khas yang membedakannya dari sarang lebah madu biasa.</p>
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="hex bg-gradient-to-br from-honey-400 via-honey-500 to-honey-600 w-64 h-72 sm:w-80 sm:h-96 shadow-2xl shadow-black/40 flex items-center justify-center">
+        <div class="hex bg-forest-900/90 w-[88%] h-[88%] flex flex-col items-center justify-center gap-3 p-6 text-center">
+          <span class="text-5xl">🍯</span>
+          <p class="font-display text-ivory-100 font-medium text-lg leading-tight">Madu Kelulut<br>HoneyDrop</p>
+          <p class="font-mono text-honey-400 text-xs">100ml · Raw &amp; Unheated</p>
+        </div>
+      </div>
+      <span class="hex bg-honey-400/90 w-16 h-[4.5rem] absolute -top-4 -left-4 hidden sm:flex items-center justify-center text-forest-900 font-mono text-[10px] font-bold text-center leading-tight shadow-lg">
+        ASLI<br>100%
+      </span>
+      <span class="hex bg-ivory-100 w-20 h-[5.5rem] absolute -bottom-6 -right-2 sm:-right-6 flex items-center justify-center text-forest-900 font-mono text-[10px] font-bold text-center leading-tight shadow-lg">
+        TANPA<br>PEMANASAN
+      </span>
     </div>
   </div>
 </section>
 
-<section class="why" id="kenapa">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow dark">Kenapa Berbeda</span>
-      <h2>Bukan sekadar "madu murah meriah".</h2>
+<!-- PAIN POINTS -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+  <div class="text-center max-w-2xl mx-auto reveal">
+    <span class="eyebrow text-honey-600 text-xs font-mono uppercase">Rasanya familiar?</span>
+    <h2 class="font-display font-semibold text-3xl sm:text-4xl text-forest-900 mt-3">
+      Tubuh sering terasa kurang fit, padahal aktivitas belum seberapa?
+    </h2>
+  </div>
+  <div class="grid sm:grid-cols-3 gap-6 mt-12">
+    <div class="reveal bg-white/60 border border-honey-500/15 rounded-2xl p-7">
+      <div class="hex bg-forest-800 w-11 h-12 flex items-center justify-center text-honey-400 mb-4">😴</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Mudah lelah &amp; kurang bertenaga</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Daya tahan tubuh terasa naik-turun, jadi lebih gampang drop saat cuaca berubah.</p>
     </div>
-
-    <div class="why-list">
-      <div class="why-item">
-        <div class="why-mark">
-          <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12" fill="none" stroke="#b8752e" stroke-width="2"/><circle cx="14" cy="14" r="6" fill="none" stroke="#b8752e" stroke-width="1.5"/></svg>
-        </div>
-        <div>
-          <h3>Bukan dari lebah madu biasa</h3>
-          <p>Klanceng adalah lebah Trigona, spesies tanpa sengat yang jauh lebih kecil dari lebah madu (Apis). Satu koloni hanya menghasilkan madu dalam jumlah terbatas setiap panen — tapi rasanya jauh lebih kompleks: asam segar di awal, manis pekat di akhir.</p>
-        </div>
-      </div>
-
-      <div class="why-item">
-        <div class="why-mark">
-          <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 2 A12 12 0 1 1 13.9 2" fill="none" stroke="#b8752e" stroke-width="2"/></svg>
-        </div>
-        <div>
-          <h3>Dipanen dari sarang berbentuk terowongan</h3>
-          <p>Alih-alih sarang heksagonal seperti lebah madu pada umumnya, klanceng membangun pot-pot penyimpanan madu dari campuran resin dan lilin (cerumen). Madu disedot langsung dari pot-pot ini, bukan diperas dari sisiran sarang.</p>
-        </div>
-      </div>
-
-      <div class="why-item">
-        <div class="why-mark">
-          <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="4" width="20" height="20" rx="3" fill="none" stroke="#b8752e" stroke-width="2"/></svg>
-        </div>
-        <div>
-          <h3>Tanpa campuran, tanpa pemanasan</h3>
-          <p>Madu Lahanay dipanen dan dikemas apa adanya — tidak dipasteurisasi, tidak dicampur gula atau madu lain. Kadar air memang sedikit lebih tinggi dari madu biasa, jadi teksturnya lebih cair.</p>
-        </div>
-      </div>
+    <div class="reveal bg-white/60 border border-honey-500/15 rounded-2xl p-7">
+      <div class="hex bg-forest-800 w-11 h-12 flex items-center justify-center text-honey-400 mb-4">🍽️</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Pencernaan kurang nyaman</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Perut kembung atau begah setelah makan, dan sistem cerna terasa lebih sensitif.</p>
+    </div>
+    <div class="reveal bg-white/60 border border-honey-500/15 rounded-2xl p-7">
+      <div class="hex bg-forest-800 w-11 h-12 flex items-center justify-center text-honey-400 mb-4">🧴</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Kulit kusam &amp; kurang segar</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Sudah pakai skincare rutin, tapi belum merasakan hasil dari dalam tubuh.</p>
     </div>
   </div>
 </section>
 
-<section class="products" id="produk">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Pilihan Kemasan</span>
-      <h2>Pilih ukuran, lalu chat langsung.</h2>
+<!-- BEDA / COMPARISON -->
+<section id="beda" class="bg-forest-800 hex-grid-dark">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow text-honey-400 text-xs font-mono uppercase">Bukan madu biasa</span>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl text-ivory-100 mt-3">
+        Kenapa madu kelulut berbeda dari madu lebah biasa?
+      </h2>
+      <p class="text-ivory-200/70 text-sm sm:text-base mt-4 leading-relaxed">
+        Lebah kelulut (trigona) tidak menyengat dan menghasilkan madu dalam jumlah kecil dengan proses fermentasi alami — itulah asal rasa asam-manisnya yang khas.
+      </p>
     </div>
 
-    <div class="product-grid">
-      <div class="product-card">
-        <span class="jar-label">Netto 100ml</span>
-        <h3>Botol Kecil</h3>
-        <span class="spec">Cocok untuk coba-coba / konsumsi harian 1 orang</span>
-        <span class="price">[HARGA]</span>
-        <span class="placeholder-note">Ganti [HARGA] dengan harga asli</span>
-        <a href="https://wa.me/6289621566266?text=Halo%20Lahanay%2C%20saya%20mau%20pesan%20madu%20klanceng%20ukuran%20100ml" class="btn btn-primary">Pesan Sekarang</a>
-      </div>
-
-      <div class="product-card">
-        <span class="jar-label">Netto 250ml</span>
-        <h3>Botol Sedang</h3>
-        <span class="spec">Paling laris — cukup untuk 1 keluarga kecil</span>
-        <span class="price">[HARGA]</span>
-        <span class="placeholder-note">Ganti [HARGA] dengan harga asli</span>
-        <a href="https://wa.me/6289621566266?text=Halo%20Lahanay%2C%20saya%20mau%20pesan%20madu%20klanceng%20ukuran%20250ml" class="btn btn-primary">Pesan Sekarang</a>
-      </div>
-
-      <div class="product-card">
-        <span class="jar-label">Netto 500ml</span>
-        <h3>Botol Besar</h3>
-        <span class="spec">Hemat untuk stok bulanan</span>
-        <span class="price">[HARGA]</span>
-        <span class="placeholder-note">Ganti [HARGA] dengan harga asli</span>
-        <a href="https://wa.me/6289621566266?text=Halo%20Lahanay%2C%20saya%20mau%20pesan%20madu%20klanceng%20ukuran%20500ml" class="btn btn-primary">Pesan Sekarang</a>
-      </div>
+    <div class="reveal mt-12 overflow-x-auto rounded-2xl border border-honey-500/20">
+      <table class="w-full min-w-[560px] text-sm">
+        <thead>
+          <tr class="bg-forest-900/60 text-ivory-100 font-display">
+            <th class="text-left px-5 py-4 font-medium">Karakteristik</th>
+            <th class="text-center px-5 py-4 font-medium">Madu Kelulut HoneyDrop</th>
+            <th class="text-center px-5 py-4 font-medium text-ivory-300/50">Madu Biasa di Pasaran</th>
+          </tr>
+        </thead>
+        <tbody class="text-ivory-200/85">
+          <tr class="border-t border-honey-500/10">
+            <td class="px-5 py-4">Rasa</td>
+            <td class="px-5 py-4 text-center text-honey-400 font-semibold">Asam-manis khas &amp; kompleks</td>
+            <td class="px-5 py-4 text-center text-ivory-300/50">Manis dominan</td>
+          </tr>
+          <tr class="border-t border-honey-500/10 bg-forest-900/30">
+            <td class="px-5 py-4">Proses pengolahan</td>
+            <td class="px-5 py-4 text-center text-honey-400 font-semibold">Tanpa pemanasan (raw)</td>
+            <td class="px-5 py-4 text-center text-ivory-300/50">Sering dipanaskan</td>
+          </tr>
+          <tr class="border-t border-honey-500/10">
+            <td class="px-5 py-4">Kekentalan tekstur</td>
+            <td class="px-5 py-4 text-center text-honey-400 font-semibold">Lebih encer secara alami</td>
+            <td class="px-5 py-4 text-center text-ivory-300/50">Kental</td>
+          </tr>
+          <tr class="border-t border-honey-500/10 bg-forest-900/30">
+            <td class="px-5 py-4">Sumber</td>
+            <td class="px-5 py-4 text-center text-honey-400 font-semibold">Peternak kelulut hutan tropis</td>
+            <td class="px-5 py-4 text-center text-ivory-300/50">Bervariasi, sering campuran</td>
+          </tr>
+          <tr class="border-t border-honey-500/10">
+            <td class="px-5 py-4">Bahan tambahan</td>
+            <td class="px-5 py-4 text-center text-honey-400 font-semibold">Tidak ada</td>
+            <td class="px-5 py-4 text-center text-ivory-300/50">Kadang ada pemanis tambahan</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <p class="text-ivory-300/40 text-xs mt-4 text-center">*Perbandingan bersifat umum berdasarkan karakteristik madu kelulut vs madu lebah biasa di pasaran.</p>
   </div>
 </section>
 
-<section class="testimoni" id="testimoni">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow dark">Kata Pelanggan</span>
-      <h2>[GANTI DENGAN TESTIMONI ASLI]</h2>
+<!-- MANFAAT -->
+<section id="manfaat" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+  <div class="text-center max-w-2xl mx-auto reveal">
+    <span class="eyebrow text-honey-600 text-xs font-mono uppercase">Manfaat rutin konsumsi</span>
+    <h2 class="font-display font-semibold text-3xl sm:text-4xl text-forest-900 mt-3">
+      Satu sendok setiap hari, banyak manfaat yang dirasakan
+    </h2>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+    <div class="reveal border border-honey-500/20 rounded-2xl p-7 bg-white/70">
+      <div class="hex bg-honey-500 w-11 h-12 flex items-center justify-center text-forest-900 mb-4 text-lg">🛡️</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Menjaga daya tahan tubuh</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Dipercaya turun-temurun membantu tubuh tetap fit saat cuaca tidak menentu.</p>
+    </div>
+    <div class="reveal border border-honey-500/20 rounded-2xl p-7 bg-white/70">
+      <div class="hex bg-honey-500 w-11 h-12 flex items-center justify-center text-forest-900 mb-4 text-lg">🌿</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Membantu pencernaan lebih nyaman</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Sifat prebiotik alami pada madu kelulut mendukung keseimbangan flora usus.</p>
+    </div>
+    <div class="reveal border border-honey-500/20 rounded-2xl p-7 bg-white/70">
+      <div class="hex bg-honey-500 w-11 h-12 flex items-center justify-center text-forest-900 mb-4 text-lg">✨</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Mendukung kesehatan kulit dari dalam</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Kandungan antioksidan alami membantu menjaga kulit tetap segar dan sehat.</p>
+    </div>
+    <div class="reveal border border-honey-500/20 rounded-2xl p-7 bg-white/70">
+      <div class="hex bg-honey-500 w-11 h-12 flex items-center justify-center text-forest-900 mb-4 text-lg">⚡</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Sumber energi alami</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Gula alami pada madu kelulut memberi energi tanpa rasa "jatuh" berlebihan.</p>
+    </div>
+    <div class="reveal border border-honey-500/20 rounded-2xl p-7 bg-white/70">
+      <div class="hex bg-honey-500 w-11 h-12 flex items-center justify-center text-forest-900 mb-4 text-lg">🌸</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Ramah untuk gaya hidup sehat</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">Indeks glikemik yang relatif lebih rendah dibanding madu biasa, cocok dikonsumsi lebih bijak.</p>
+    </div>
+    <div class="reveal border border-honey-500/20 rounded-2xl p-7 bg-white/70">
+      <div class="hex bg-honey-500 w-11 h-12 flex items-center justify-center text-forest-900 mb-4 text-lg">🚫</div>
+      <h3 class="font-display font-semibold text-lg text-forest-900">Tanpa pengawet &amp; pemanis tambahan</h3>
+      <p class="text-char-700 text-sm mt-2 leading-relaxed">100% murni dari sarang, tanpa campuran gula atau bahan sintetis apa pun.</p>
+    </div>
+  </div>
+  <p class="text-char-700/50 text-xs mt-8 text-center max-w-2xl mx-auto leading-relaxed">
+    *Manfaat di atas merujuk pada penggunaan tradisional madu kelulut secara turun-temurun. Produk ini bukan obat dan tidak dimaksudkan untuk mendiagnosis, mengobati, atau menyembuhkan penyakit apa pun.
+  </p>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni" class="bg-ivory-200 hex-grid">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow text-honey-600 text-xs font-mono uppercase">Kata mereka yang sudah coba</span>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl text-forest-900 mt-3">
+        Pengalaman nyata para pelanggan HoneyDrop
+      </h2>
     </div>
 
-    <div class="testi-grid">
-      <div class="testi-card">
-        <p class="quote">"[Tempel testimoni pelanggan di sini — bisa dari chat WA yang di-screenshot lalu ditulis ulang, atau kutipan langsung.]"</p>
-        <span class="who">— [Nama], [Kota]</span>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-honey-500/10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex bg-forest-800 w-10 h-11 flex items-center justify-center text-honey-400 font-display font-semibold">RA</span>
+          <div>
+            <p class="font-semibold text-forest-900 text-sm">Rina A.</p>
+            <p class="text-char-700/60 text-xs">Bandung</p>
+          </div>
+        </div>
+        <p class="text-honey-500 text-sm mb-2">★★★★★</p>
+        <p class="text-char-700 text-sm leading-relaxed">"Rasanya beda banget sama madu biasa, asam-manisnya pas. Sekarang jadi rutinitas pagi keluarga."</p>
       </div>
-      <div class="testi-card">
-        <p class="quote">"[Testimoni kedua di sini.]"</p>
-        <span class="who">— [Nama], [Kota]</span>
+
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-honey-500/10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex bg-forest-800 w-10 h-11 flex items-center justify-center text-honey-400 font-display font-semibold">DH</span>
+          <div>
+            <p class="font-semibold text-forest-900 text-sm">Dedi H.</p>
+            <p class="text-char-700/60 text-xs">Surabaya</p>
+          </div>
+        </div>
+        <p class="text-honey-500 text-sm mb-2">★★★★★</p>
+        <p class="text-char-700 text-sm leading-relaxed">"Awalnya ragu karena teksturnya encer, ternyata memang itu ciri khas madu kelulut asli. Kemasannya juga rapi."</p>
       </div>
-      <div class="testi-card">
-        <p class="quote">"[Testimoni ketiga di sini.]"</p>
-        <span class="who">— [Nama], [Kota]</span>
+
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-honey-500/10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex bg-forest-800 w-10 h-11 flex items-center justify-center text-honey-400 font-display font-semibold">SN</span>
+          <div>
+            <p class="font-semibold text-forest-900 text-sm">Siti N.</p>
+            <p class="text-char-700/60 text-xs">Yogyakarta</p>
+          </div>
+        </div>
+        <p class="text-honey-500 text-sm mb-2">★★★★★</p>
+        <p class="text-char-700 text-sm leading-relaxed">"Pesan pakai COD, barang sampai rapi dan cepat. Sudah repeat order kedua kalinya untuk stok di rumah."</p>
+      </div>
+
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-honey-500/10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex bg-forest-800 w-10 h-11 flex items-center justify-center text-honey-400 font-display font-semibold">BW</span>
+          <div>
+            <p class="font-semibold text-forest-900 text-sm">Budi W.</p>
+            <p class="text-char-700/60 text-xs">Medan</p>
+          </div>
+        </div>
+        <p class="text-honey-500 text-sm mb-2">★★★★★</p>
+        <p class="text-char-700 text-sm leading-relaxed">"Suka karena tidak terlalu manis, jadi nyaman dikonsumsi tiap hari tanpa rasa eneg."</p>
+      </div>
+
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-honey-500/10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex bg-forest-800 w-10 h-11 flex items-center justify-center text-honey-400 font-display font-semibold">MF</span>
+          <div>
+            <p class="font-semibold text-forest-900 text-sm">Maya F.</p>
+            <p class="text-char-700/60 text-xs">Makassar</p>
+          </div>
+        </div>
+        <p class="text-honey-500 text-sm mb-2">★★★★★</p>
+        <p class="text-char-700 text-sm leading-relaxed">"Kemasan botolnya elegan, cocok juga buat hadiah. Rasanya otentik, bukan yang dicampur gula."</p>
+      </div>
+
+      <div class="reveal bg-white rounded-2xl p-7 shadow-sm border border-honey-500/10">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="hex bg-forest-800 w-10 h-11 flex items-center justify-center text-honey-400 font-display font-semibold">AP</span>
+          <div>
+            <p class="font-semibold text-forest-900 text-sm">Andi P.</p>
+            <p class="text-char-700/60 text-xs">Denpasar</p>
+          </div>
+        </div>
+        <p class="text-honey-500 text-sm mb-2">★★★★★</p>
+        <p class="text-char-700 text-sm leading-relaxed">"Pelayanannya ramah, respon cepat di WhatsApp. Produknya juga sesuai deskripsi, recommended."</p>
       </div>
     </div>
+    <p class="text-char-700/40 text-xs mt-8 text-center">*Testimoni merupakan pengalaman pribadi masing-masing pelanggan dan bersifat ilustratif.</p>
   </div>
 </section>
 
-<section class="cara-pesan">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow dark">Cara Pesan</span>
-      <h2>Empat langkah, selesai lewat chat.</h2>
-    </div>
-
-    <div class="step-row">
-      <div class="step">
-        <span class="num">01</span>
-        <h4>Pilih ukuran</h4>
-        <p>Tentukan botol 100ml, 250ml, atau 500ml sesuai kebutuhan.</p>
-      </div>
-      <div class="step">
-        <span class="num">02</span>
-        <h4>Chat via WhatsApp</h4>
-        <p>Klik tombol pesan, pesan otomatis terisi, tinggal kirim.</p>
-      </div>
-      <div class="step">
-        <span class="num">03</span>
-        <h4>Konfirmasi & transfer</h4>
-        <p>Kami balas dengan total harga dan ongkir sesuai alamat.</p>
-      </div>
-      <div class="step">
-        <span class="num">04</span>
-        <h4>Madu dikirim</h4>
-        <p>Dikemas rapat agar tidak bocor, lalu dikirim via kurir pilihan.</p>
-      </div>
-    </div>
+<!-- TRUST BADGES -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <div class="reveal flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-forest-900">
+    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Halal MUI</div>
+    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Terdaftar BPOM</div>
+    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> 100% Original</div>
+    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Garansi Uang Kembali</div>
+    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Gratis Ongkir</div>
   </div>
 </section>
 
-<section class="artikel-preview">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Baca Dulu</span>
-      <h2>Belajar soal madu klanceng dari sumbernya.</h2>
-      <p>Kami menulis rutin soal manfaat, cara membedakan madu asli, dan seluk-beluk lebah Trigona.</p>
+<!-- PRICING -->
+<section id="paket" class="bg-forest-900 hex-grid-dark">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow text-honey-400 text-xs font-mono uppercase">Pilih paket Anda</span>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl text-ivory-100 mt-3">
+        Semakin banyak paket, semakin besar hematnya
+      </h2>
+      <p class="text-ivory-200/70 text-sm mt-4">Semua paket sudah termasuk gratis ongkir &amp; bisa bayar di tempat (COD).</p>
     </div>
 
-    <div class="artikel-grid">
-      <a href="/artikel/" class="artikel-card">
-        <span class="tag">Panduan</span>
-        <h4>Cara Membedakan Madu Klanceng Asli dan Palsu</h4>
-        <p>Tanda-tanda sederhana yang bisa dicek sebelum membeli.</p>
-      </a>
-      <a href="/artikel/" class="artikel-card">
-        <span class="tag">Seputar Lebah</span>
-        <h4>Mengenal Trigona, Lebah Tanpa Sengat</h4>
-        <p>Kenapa koloninya kecil dan madunya terbatas.</p>
-      </a>
-      <a href="/artikel/" class="artikel-card">
-        <span class="tag">Tips</span>
-        <h4>Cara Menyimpan Madu Klanceng agar Awet</h4>
-        <p>Madu klanceng lebih cair — begini cara merawatnya.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <h5>Lahanay</h5>
-        <p>Madu klanceng asli, dipanen langsung dari sarang. Dikelola langsung — bukan reseller.</p>
-      </div>
-      <div>
-        <h5>Kontak</h5>
-        <ul>
-          <li><a href="https://wa.me/6289621566266">WhatsApp: 0896-2156-6266</a></li>
-          <li><a href="/artikel/">Artikel</a></li>
+    <div class="grid md:grid-cols-3 gap-6 mt-12 items-stretch">
+      <!-- Paket 1 -->
+      <div class="reveal bg-forest-800/60 border border-honey-500/20 rounded-2xl p-8 flex flex-col">
+        <h3 class="font-display font-semibold text-xl text-ivory-100">Paket Coba</h3>
+        <p class="text-ivory-200/60 text-sm mt-1">1 Botol · 100ml</p>
+        <div class="mt-6">
+          <p class="text-ivory-300/40 text-sm stripe-strike inline-block">Rp 145.000</p>
+          <p class="font-display font-semibold text-3xl text-honey-400 mt-1">Rp 119.000</p>
+        </div>
+        <ul class="text-ivory-200/75 text-sm mt-6 space-y-3 flex-1">
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> 1 botol madu kelulut 100ml</li>
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> Kemasan aman &amp; rapi</li>
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> Bisa COD area terpilih</li>
         </ul>
+        <a href="#pesan" class="mt-8 text-center border border-honey-400/60 hover:bg-honey-400 hover:text-forest-900 text-honey-400 font-semibold py-3 rounded-full transition-colors">Pilih Paket</a>
       </div>
-      <div>
-        <h5>Lokasi</h5>
-        <ul>
-          <li>[Ganti dengan kota/lokasi peternakan]</li>
+
+      <!-- Paket 2 - Best seller -->
+      <div class="reveal relative bg-honey-500 rounded-2xl p-8 flex flex-col shadow-2xl shadow-honey-500/20 md:-translate-y-3">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-rust-600 text-white text-xs font-mono font-bold uppercase px-4 py-1.5 rounded-full whitespace-nowrap">Paling Laris</span>
+        <h3 class="font-display font-semibold text-xl text-forest-900 mt-2">Paket Hemat</h3>
+        <p class="text-forest-900/70 text-sm mt-1">3 Botol · 100ml</p>
+        <div class="mt-6">
+          <p class="text-forest-900/40 text-sm stripe-strike inline-block">Rp 435.000</p>
+          <p class="font-display font-semibold text-3xl text-forest-900 mt-1">Rp 315.000</p>
+        </div>
+        <ul class="text-forest-900/80 text-sm mt-6 space-y-3 flex-1">
+          <li class="flex gap-2"><span>✓</span> 3 botol madu kelulut 100ml</li>
+          <li class="flex gap-2"><span>✓</span> Hemat hingga 27%</li>
+          <li class="flex gap-2"><span>✓</span> Gratis ongkir seluruh Indonesia</li>
+          <li class="flex gap-2"><span>✓</span> Bonus sendok takar madu</li>
         </ul>
+        <a href="#pesan" class="mt-8 text-center bg-forest-900 hover:bg-forest-800 text-ivory-100 font-semibold py-3 rounded-full transition-colors">Pilih Paket</a>
+      </div>
+
+      <!-- Paket 3 -->
+      <div class="reveal bg-forest-800/60 border border-honey-500/20 rounded-2xl p-8 flex flex-col">
+        <h3 class="font-display font-semibold text-xl text-ivory-100">Paket Keluarga</h3>
+        <p class="text-ivory-200/60 text-sm mt-1">6 Botol · 100ml</p>
+        <div class="mt-6">
+          <p class="text-ivory-300/40 text-sm stripe-strike inline-block">Rp 870.000</p>
+          <p class="font-display font-semibold text-3xl text-honey-400 mt-1">Rp 575.000</p>
+        </div>
+        <ul class="text-ivory-200/75 text-sm mt-6 space-y-3 flex-1">
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> 6 botol madu kelulut 100ml</li>
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> Hemat hingga 34%</li>
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> Gratis ongkir + bonus 1 botol 30ml</li>
+          <li class="flex gap-2"><span class="text-honey-400">✓</span> Prioritas layanan pelanggan</li>
+        </ul>
+        <a href="#pesan" class="mt-8 text-center border border-honey-400/60 hover:bg-honey-400 hover:text-forest-900 text-honey-400 font-semibold py-3 rounded-full transition-colors">Pilih Paket</a>
       </div>
     </div>
-    <p class="disclaimer">Madu klanceng adalah produk pangan, bukan obat. Informasi manfaat di halaman ini bersifat umum dan tidak dimaksudkan untuk mendiagnosis, mengobati, atau menggantikan saran medis. Konsultasikan ke dokter untuk kondisi kesehatan tertentu.</p>
+  </div>
+</section>
+
+<!-- ORDER FORM (COD - FIKTIF) -->
+<section id="pesan" class="bg-ivory-200">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="text-center max-w-xl mx-auto reveal">
+      <span class="eyebrow text-honey-600 text-xs font-mono uppercase">Form pemesanan</span>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl text-forest-900 mt-3">Pesan sekarang, bayar saat barang sampai</h2>
+      <p class="text-char-700 text-sm mt-4">Isi data di bawah, tim kami akan menghubungi Anda via WhatsApp untuk konfirmasi pesanan.</p>
+    </div>
+
+    <form id="codForm" class="reveal mt-10 bg-white rounded-2xl border border-honey-500/20 shadow-sm p-6 sm:p-10 grid sm:grid-cols-2 gap-6">
+      <div class="sm:col-span-2">
+        <label for="nama" class="block text-sm font-semibold text-forest-900 mb-1.5">Nama Lengkap</label>
+        <input required id="nama" name="nama" type="text" placeholder="Contoh: Siti Nurhaliza" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50">
+      </div>
+
+      <div>
+        <label for="wa" class="block text-sm font-semibold text-forest-900 mb-1.5">No. WhatsApp Aktif</label>
+        <input required id="wa" name="wa" type="tel" placeholder="08xx-xxxx-xxxx" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50">
+      </div>
+
+      <div>
+        <label for="paket" class="block text-sm font-semibold text-forest-900 mb-1.5">Pilih Paket</label>
+        <select required id="paket" name="paket" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50">
+          <option value="">— Pilih paket —</option>
+          <option value="Paket Coba (1 botol) - Rp119.000">Paket Coba — 1 Botol (Rp119.000)</option>
+          <option value="Paket Hemat (3 botol) - Rp315.000" selected>Paket Hemat — 3 Botol (Rp315.000)</option>
+          <option value="Paket Keluarga (6 botol) - Rp575.000">Paket Keluarga — 6 Botol (Rp575.000)</option>
+        </select>
+      </div>
+
+      <div class="sm:col-span-2">
+        <label for="alamat" class="block text-sm font-semibold text-forest-900 mb-1.5">Alamat Lengkap Pengiriman</label>
+        <textarea required id="alamat" name="alamat" rows="3" placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan, kecamatan, kota, kode pos" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50"></textarea>
+      </div>
+
+      <div class="sm:col-span-2">
+        <label for="catatan" class="block text-sm font-semibold text-forest-900 mb-1.5">Catatan Tambahan <span class="font-normal text-char-700/50">(opsional)</span></label>
+        <input id="catatan" name="catatan" type="text" placeholder="Contoh: kirim sore hari, patokan rumah warna biru" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50">
+      </div>
+
+      <div class="sm:col-span-2">
+        <button type="submit" class="w-full bg-rust-600 hover:bg-rust-700 transition-colors text-white font-semibold py-4 rounded-full shadow-lg shadow-rust-600/20">
+          Konfirmasi Pesanan — Bayar di Tempat (COD)
+        </button>
+        <p class="text-char-700/50 text-xs mt-3 text-center">Dengan memesan, Anda menyetujui tim kami menghubungi nomor WhatsApp di atas untuk konfirmasi.</p>
+      </div>
+    </form>
+
+    <div id="codSuccess" class="hidden reveal mt-10 bg-forest-900 text-ivory-100 rounded-2xl p-8 text-center">
+      <p class="text-3xl mb-2">🍯</p>
+      <h3 class="font-display font-semibold text-xl">Terima kasih, pesanan Anda diterima!</h3>
+      <p class="text-ivory-200/70 text-sm mt-2">Tim kami akan segera menghubungi <span id="codWaEcho" class="text-honey-400 font-semibold"></span> via WhatsApp untuk konfirmasi paket dan alamat pengiriman.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+  <div class="text-center reveal">
+    <span class="eyebrow text-honey-600 text-xs font-mono uppercase">Masih ragu?</span>
+    <h2 class="font-display font-semibold text-3xl sm:text-4xl text-forest-900 mt-3">Pertanyaan yang sering ditanyakan</h2>
+  </div>
+
+  <div class="mt-10 space-y-3">
+    <details class="faq reveal bg-white border border-honey-500/15 rounded-xl px-6 py-4">
+      <summary class="flex items-center justify-between cursor-pointer font-semibold text-forest-900 text-sm sm:text-base">
+        Kenapa tekstur madu kelulut lebih encer dari madu biasa?
+        <span class="chev transition-transform text-honey-600">▾</span>
+      </summary>
+      <p class="text-char-700 text-sm mt-3 leading-relaxed">Karena kadar air pada madu kelulut secara alami lebih tinggi dan tidak melalui proses pemanasan, sehingga teksturnya memang lebih cair dibanding madu lebah biasa. Ini justru menandakan keasliannya.</p>
+    </details>
+
+    <details class="faq reveal bg-white border border-honey-500/15 rounded-xl px-6 py-4">
+      <summary class="flex items-center justify-between cursor-pointer font-semibold text-forest-900 text-sm sm:text-base">
+        Apakah tersedia sistem COD (bayar di tempat)?
+        <span class="chev transition-transform text-honey-600">▾</span>
+      </summary>
+      <p class="text-char-700 text-sm mt-3 leading-relaxed">Ya, COD tersedia untuk area-area terpilih. Setelah mengisi form pemesanan, tim kami akan mengonfirmasi ketersediaan layanan COD di lokasi Anda melalui WhatsApp.</p>
+    </details>
+
+    <details class="faq reveal bg-white border border-honey-500/15 rounded-xl px-6 py-4">
+      <summary class="flex items-center justify-between cursor-pointer font-semibold text-forest-900 text-sm sm:text-base">
+        Berapa lama masa simpan madu kelulut setelah dibuka?
+        <span class="chev transition-transform text-honey-600">▾</span>
+      </summary>
+      <p class="text-char-700 text-sm mt-3 leading-relaxed">Simpan di tempat sejuk dan kering, jauh dari sinar matahari langsung. Selalu gunakan sendok kering setiap kali mengambil madu agar kualitasnya tetap terjaga lebih lama.</p>
+    </details>
+
+    <details class="faq reveal bg-white border border-honey-500/15 rounded-xl px-6 py-4">
+      <summary class="flex items-center justify-between cursor-pointer font-semibold text-forest-900 text-sm sm:text-base">
+        Bagaimana jika produk yang diterima tidak sesuai?
+        <span class="chev transition-transform text-honey-600">▾</span>
+      </summary>
+      <p class="text-char-700 text-sm mt-3 leading-relaxed">Kami memberikan garansi uang kembali apabila produk yang Anda terima tidak sesuai deskripsi atau mengalami kerusakan saat pengiriman. Hubungi tim kami maksimal 2x24 jam setelah barang diterima.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-forest-900 hex-grid-dark">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-ivory-100/10">
+      <a href="#top" class="flex items-center gap-2.5">
+        <span class="hex bg-honey-500 w-8 h-9 flex items-center justify-center text-forest-900 text-sm">🐝</span>
+        <span class="font-display font-semibold text-lg text-ivory-100">HoneyDrop</span>
+      </a>
+      <div class="flex items-center gap-6 text-ivory-200/70 text-sm">
+        <a href="#manfaat" class="hover:text-honey-400 transition-colors">Manfaat</a>
+        <a href="#paket" class="hover:text-honey-400 transition-colors">Paket Harga</a>
+        <a href="#pesan" class="hover:text-honey-400 transition-colors">Pemesanan</a>
+      </div>
+    </div>
+    <p class="text-ivory-300/40 text-xs mt-8 leading-relaxed max-w-3xl">
+      Produk ini bukan obat dan tidak dimaksudkan untuk mendiagnosis, mengobati, menyembuhkan, atau mencegah penyakit apa pun. Testimoni pelanggan bersifat pengalaman pribadi dan ilustratif. Halaman ini merupakan contoh desain sales page statis.
+    </p>
+    <p class="text-ivory-300/30 text-xs mt-4">© 2026 HoneyDrop. Seluruh hak cipta dilindungi.</p>
   </div>
 </footer>
+
+<script>
+  // Scroll-reveal animation
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Fictional COD form — front-end only, no real backend/payment processing
+  const codForm = document.getElementById('codForm');
+  const codSuccess = document.getElementById('codSuccess');
+  const codWaEcho = document.getElementById('codWaEcho');
+  codForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const wa = document.getElementById('wa').value.trim();
+    codWaEcho.textContent = wa || 'Anda';
+    codForm.classList.add('hidden');
+    codSuccess.classList.remove('hidden');
+    codSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
 
 </body>
 </html>
