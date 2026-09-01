@@ -3,69 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HoneyDrop — Madu Murni Kelulut &amp; Meliponini Asli</title>
+<title>Lahanay — Madu Murni Kelulut &amp; Meliponini Asli</title>
 <meta name="description" content="Madu murni kelulut (trigona) asli dari peternak lebah hutan tropis. Rasa asam-manis khas, tanpa pemanasan, tanpa campuran. COD tersedia se-Indonesia.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          forest: { 900:'#1B2A18', 800:'#233420', 700:'#33472E', 600:'#425A3B' },
-          honey:  { 600:'#B07F1E', 500:'#CB9A2D', 400:'#DDB349', 300:'#E9C978' },
-          ivory:  { 100:'#FBF3DE', 200:'#F7EFDD', 300:'#F1E6C9' },
-          rust:   { 600:'#B23A2E', 700:'#98301F' },
-          char:   { 900:'#241D12', 700:'#4A3720' },
-        },
-        fontFamily: {
-          display: ['Fraunces','serif'],
-          body: ['"Plus Jakarta Sans"','sans-serif'],
-          mono: ['"Space Mono"','monospace'],
-        },
-      }
-    }
-  }
-</script>
-
-<style>
-  :root{ scroll-behavior:smooth; }
-  @media (prefers-reduced-motion: reduce){ :root{ scroll-behavior:auto; } .reveal{opacity:1!important; transform:none!important; transition:none!important;} }
-
-  body{ background:#FBF3DE; }
-
-  .hex{ clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
-
-  .hex-grid{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='96' viewBox='0 0 84 96'%3E%3Cpath d='M42 0 L84 24 L84 72 L42 96 L0 72 L0 24 Z' fill='none' stroke='%23E9C978' stroke-opacity='0.16' stroke-width='1.5'/%3E%3C/svg%3E");
-    background-size: 84px 96px;
-  }
-  .hex-grid-dark{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='96' viewBox='0 0 84 96'%3E%3Cpath d='M42 0 L84 24 L84 72 L42 96 L0 72 L0 24 Z' fill='none' stroke='%23DDB349' stroke-opacity='0.12' stroke-width='1.5'/%3E%3C/svg%3E");
-    background-size: 84px 96px;
-  }
-
-  .drip-divider{ height:34px; width:100%; display:block; }
-
-  .eyebrow{ letter-spacing:.14em; }
-
-  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
-  .reveal.is-visible{ opacity:1; transform:translateY(0); }
-
-  details.faq[open] summary .chev{ transform:rotate(180deg); }
-  summary::-webkit-details-marker{ display:none; }
-
-  .stripe-strike{ position:relative; }
-  .stripe-strike::after{ content:''; position:absolute; left:-4%; right:-4%; top:50%; height:2px; background:#98301F; transform:rotate(-4deg); }
-
-  input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible{
-    outline: 2px solid #B07F1E; outline-offset: 2px;
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="font-body text-char-900 antialiased">
@@ -85,14 +30,15 @@
       <span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center">
         <span class="text-honey-400 text-sm">🐝</span>
       </span>
-      <span class="font-display font-semibold text-lg tracking-tight text-forest-900">HoneyDrop</span>
+      <span class="font-display font-semibold text-lg tracking-tight text-forest-900">Lahanay</span>
     </a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-char-700">
       <a href="#manfaat" class="hover:text-honey-600 transition-colors">Manfaat</a>
       <a href="#beda" class="hover:text-honey-600 transition-colors">Kenapa Kelulut</a>
       <a href="#testimoni" class="hover:text-honey-600 transition-colors">Testimoni</a>
-      <a href="#paket" class="hover:text-honey-600 transition-colors">Paket Harga</a>
+      <a href="#paket" class="hover:text-honey-600 transition-colors">Harga</a>
       <a href="#faq" class="hover:text-honey-600 transition-colors">FAQ</a>
+      <a href="artikel/index.html" class="hover:text-honey-600 transition-colors">Artikel</a>
     </nav>
     <a href="#pesan" class="bg-rust-600 hover:bg-rust-700 transition-colors text-white text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full shadow-sm">
       Pesan Sekarang
@@ -122,8 +68,8 @@
         </a>
       </div>
       <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-ivory-200/70 text-xs sm:text-sm font-medium">
-        <span class="flex items-center gap-1.5">✅ Halal MUI</span>
-        <span class="flex items-center gap-1.5">✅ Terdaftar BPOM</span>
+        <span class="flex items-center gap-1.5">✅ 100% Murni Original</span>
+        <span class="flex items-center gap-1.5">✅ Kemasan Aman &amp; Rapi</span>
         <span class="flex items-center gap-1.5">✅ Garansi Uang Kembali</span>
       </div>
     </div>
@@ -132,8 +78,8 @@
       <div class="hex bg-gradient-to-br from-honey-400 via-honey-500 to-honey-600 w-64 h-72 sm:w-80 sm:h-96 shadow-2xl shadow-black/40 flex items-center justify-center">
         <div class="hex bg-forest-900/90 w-[88%] h-[88%] flex flex-col items-center justify-center gap-3 p-6 text-center">
           <span class="text-5xl">🍯</span>
-          <p class="font-display text-ivory-100 font-medium text-lg leading-tight">Madu Kelulut<br>HoneyDrop</p>
-          <p class="font-mono text-honey-400 text-xs">100ml · Raw &amp; Unheated</p>
+          <p class="font-display text-ivory-100 font-medium text-lg leading-tight">Madu Kelulut<br>Lahanay</p>
+          <p class="font-mono text-honey-400 text-xs">250g · Raw &amp; Unheated</p>
         </div>
       </div>
       <span class="hex bg-honey-400/90 w-16 h-[4.5rem] absolute -top-4 -left-4 hidden sm:flex items-center justify-center text-forest-900 font-mono text-[10px] font-bold text-center leading-tight shadow-lg">
@@ -191,7 +137,7 @@
         <thead>
           <tr class="bg-forest-900/60 text-ivory-100 font-display">
             <th class="text-left px-5 py-4 font-medium">Karakteristik</th>
-            <th class="text-center px-5 py-4 font-medium">Madu Kelulut HoneyDrop</th>
+            <th class="text-center px-5 py-4 font-medium">Madu Kelulut Lahanay</th>
             <th class="text-center px-5 py-4 font-medium text-ivory-300/50">Madu Biasa di Pasaran</th>
           </tr>
         </thead>
@@ -272,6 +218,12 @@
   <p class="text-char-700/50 text-xs mt-8 text-center max-w-2xl mx-auto leading-relaxed">
     *Manfaat di atas merujuk pada penggunaan tradisional madu kelulut secara turun-temurun. Produk ini bukan obat dan tidak dimaksudkan untuk mendiagnosis, mengobati, atau menyembuhkan penyakit apa pun.
   </p>
+  <div class="reveal mt-10 flex justify-center">
+    <a href="artikel/index.html" class="inline-flex items-center gap-2 text-forest-900 font-semibold text-sm border border-honey-500/30 hover:border-honey-500 rounded-full px-6 py-3 transition-colors">
+      📚 Baca artikel seputar madu kelulut &amp; manfaatnya
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
 </section>
 
 <!-- TESTIMONI -->
@@ -280,7 +232,7 @@
     <div class="text-center max-w-2xl mx-auto reveal">
       <span class="eyebrow text-honey-600 text-xs font-mono uppercase">Kata mereka yang sudah coba</span>
       <h2 class="font-display font-semibold text-3xl sm:text-4xl text-forest-900 mt-3">
-        Pengalaman nyata para pelanggan HoneyDrop
+        Pengalaman nyata para pelanggan Lahanay
       </h2>
     </div>
 
@@ -357,15 +309,13 @@
         <p class="text-char-700 text-sm leading-relaxed">"Pelayanannya ramah, respon cepat di WhatsApp. Produknya juga sesuai deskripsi, recommended."</p>
       </div>
     </div>
-    <p class="text-char-700/40 text-xs mt-8 text-center">*Testimoni merupakan pengalaman pribadi masing-masing pelanggan dan bersifat ilustratif.</p>
+    <p class="text-char-700/40 text-xs mt-8 text-center">*Testimoni merupakan pengalaman pribadi masing-masing pelanggan</p>
   </div>
 </section>
 
 <!-- TRUST BADGES -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
   <div class="reveal flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-forest-900">
-    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Halal MUI</div>
-    <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Terdaftar BPOM</div>
     <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> 100% Original</div>
     <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Garansi Uang Kembali</div>
     <div class="flex items-center gap-2 text-sm font-semibold"><span class="hex bg-forest-800 w-8 h-9 flex items-center justify-center text-honey-400 text-xs">✓</span> Gratis Ongkir</div>
@@ -376,64 +326,27 @@
 <section id="paket" class="bg-forest-900 hex-grid-dark">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
     <div class="text-center max-w-2xl mx-auto reveal">
-      <span class="eyebrow text-honey-400 text-xs font-mono uppercase">Pilih paket Anda</span>
+      <span class="eyebrow text-honey-400 text-xs font-mono uppercase">Harga Spesial</span>
       <h2 class="font-display font-semibold text-3xl sm:text-4xl text-ivory-100 mt-3">
-        Semakin banyak paket, semakin besar hematnya
+        Satu harga, kualitas premium yang sama untuk semua
       </h2>
-      <p class="text-ivory-200/70 text-sm mt-4">Semua paket sudah termasuk gratis ongkir &amp; bisa bayar di tempat (COD).</p>
+      <p class="text-ivory-200/70 text-sm mt-4">Tanpa paket-paketan yang membingungkan — harga per botol tetap sama, mau pesan 1 atau lebih.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6 mt-12 items-stretch">
-      <!-- Paket 1 -->
-      <div class="reveal bg-forest-800/60 border border-honey-500/20 rounded-2xl p-8 flex flex-col">
-        <h3 class="font-display font-semibold text-xl text-ivory-100">Paket Coba</h3>
-        <p class="text-ivory-200/60 text-sm mt-1">1 Botol · 100ml</p>
-        <div class="mt-6">
-          <p class="text-ivory-300/40 text-sm stripe-strike inline-block">Rp 145.000</p>
-          <p class="font-display font-semibold text-3xl text-honey-400 mt-1">Rp 119.000</p>
-        </div>
-        <ul class="text-ivory-200/75 text-sm mt-6 space-y-3 flex-1">
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> 1 botol madu kelulut 100ml</li>
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> Kemasan aman &amp; rapi</li>
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> Bisa COD area terpilih</li>
-        </ul>
-        <a href="#pesan" class="mt-8 text-center border border-honey-400/60 hover:bg-honey-400 hover:text-forest-900 text-honey-400 font-semibold py-3 rounded-full transition-colors">Pilih Paket</a>
+    <div class="reveal max-w-sm mx-auto mt-12 bg-honey-500 rounded-2xl p-8 flex flex-col shadow-2xl shadow-honey-500/20">
+      <h3 class="font-display font-semibold text-xl text-forest-900">Madu Kelulut Lahanay</h3>
+      <p class="text-forest-900/70 text-sm mt-1">1 Botol · 250 gram</p>
+      <div class="mt-6">
+        <p class="font-display font-semibold text-4xl text-forest-900">Rp 115.000</p>
+        <p class="text-forest-900/60 text-xs mt-1">per botol</p>
       </div>
-
-      <!-- Paket 2 - Best seller -->
-      <div class="reveal relative bg-honey-500 rounded-2xl p-8 flex flex-col shadow-2xl shadow-honey-500/20 md:-translate-y-3">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-rust-600 text-white text-xs font-mono font-bold uppercase px-4 py-1.5 rounded-full whitespace-nowrap">Paling Laris</span>
-        <h3 class="font-display font-semibold text-xl text-forest-900 mt-2">Paket Hemat</h3>
-        <p class="text-forest-900/70 text-sm mt-1">3 Botol · 100ml</p>
-        <div class="mt-6">
-          <p class="text-forest-900/40 text-sm stripe-strike inline-block">Rp 435.000</p>
-          <p class="font-display font-semibold text-3xl text-forest-900 mt-1">Rp 315.000</p>
-        </div>
-        <ul class="text-forest-900/80 text-sm mt-6 space-y-3 flex-1">
-          <li class="flex gap-2"><span>✓</span> 3 botol madu kelulut 100ml</li>
-          <li class="flex gap-2"><span>✓</span> Hemat hingga 27%</li>
-          <li class="flex gap-2"><span>✓</span> Gratis ongkir seluruh Indonesia</li>
-          <li class="flex gap-2"><span>✓</span> Bonus sendok takar madu</li>
-        </ul>
-        <a href="#pesan" class="mt-8 text-center bg-forest-900 hover:bg-forest-800 text-ivory-100 font-semibold py-3 rounded-full transition-colors">Pilih Paket</a>
-      </div>
-
-      <!-- Paket 3 -->
-      <div class="reveal bg-forest-800/60 border border-honey-500/20 rounded-2xl p-8 flex flex-col">
-        <h3 class="font-display font-semibold text-xl text-ivory-100">Paket Keluarga</h3>
-        <p class="text-ivory-200/60 text-sm mt-1">6 Botol · 100ml</p>
-        <div class="mt-6">
-          <p class="text-ivory-300/40 text-sm stripe-strike inline-block">Rp 870.000</p>
-          <p class="font-display font-semibold text-3xl text-honey-400 mt-1">Rp 575.000</p>
-        </div>
-        <ul class="text-ivory-200/75 text-sm mt-6 space-y-3 flex-1">
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> 6 botol madu kelulut 100ml</li>
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> Hemat hingga 34%</li>
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> Gratis ongkir + bonus 1 botol 30ml</li>
-          <li class="flex gap-2"><span class="text-honey-400">✓</span> Prioritas layanan pelanggan</li>
-        </ul>
-        <a href="#pesan" class="mt-8 text-center border border-honey-400/60 hover:bg-honey-400 hover:text-forest-900 text-honey-400 font-semibold py-3 rounded-full transition-colors">Pilih Paket</a>
-      </div>
+      <ul class="text-forest-900/80 text-sm mt-6 space-y-3 flex-1">
+        <li class="flex gap-2"><span>✓</span> 1 botol madu kelulut 250 gr</li>
+        <li class="flex gap-2"><span>✓</span> Kemasan aman &amp; rapi</li>
+        <li class="flex gap-2"><span>✓</span> Bisa COD area terpilih</li>
+      </ul>
+      <a href="#pesan" class="mt-8 text-center bg-forest-900 hover:bg-forest-800 text-ivory-100 font-semibold py-3 rounded-full transition-colors">Pesan Sekarang</a>
+      <p class="text-forest-900/50 text-xs mt-4 text-center">Ingin pesan lebih dari 1 botol? Atur jumlahnya langsung di form pemesanan.</p>
     </div>
   </div>
 </section>
@@ -459,13 +372,9 @@
       </div>
 
       <div>
-        <label for="paket" class="block text-sm font-semibold text-forest-900 mb-1.5">Pilih Paket</label>
-        <select required id="paket" name="paket" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50">
-          <option value="">— Pilih paket —</option>
-          <option value="Paket Coba (1 botol) - Rp119.000">Paket Coba — 1 Botol (Rp119.000)</option>
-          <option value="Paket Hemat (3 botol) - Rp315.000" selected>Paket Hemat — 3 Botol (Rp315.000)</option>
-          <option value="Paket Keluarga (6 botol) - Rp575.000">Paket Keluarga — 6 Botol (Rp575.000)</option>
-        </select>
+        <label for="jumlah" class="block text-sm font-semibold text-forest-900 mb-1.5">Jumlah Botol</label>
+        <input required id="jumlah" name="jumlah" type="number" min="1" value="1" class="w-full rounded-xl border border-honey-500/25 px-4 py-3 text-sm bg-ivory-100/50">
+        <p class="text-char-700/50 text-xs mt-1.5">Rp 115.000 per botol (250 gram)</p>
       </div>
 
       <div class="sm:col-span-2">
@@ -482,14 +391,14 @@
         <button type="submit" class="w-full bg-rust-600 hover:bg-rust-700 transition-colors text-white font-semibold py-4 rounded-full shadow-lg shadow-rust-600/20">
           Konfirmasi Pesanan — Bayar di Tempat (COD)
         </button>
-        <p class="text-char-700/50 text-xs mt-3 text-center">Dengan memesan, Anda menyetujui tim kami menghubungi nomor WhatsApp di atas untuk konfirmasi.</p>
+        <p class="text-char-700/50 text-xs mt-3 text-center">Setelah menekan tombol ini, Anda akan diarahkan ke WhatsApp untuk mengirim detail pesanan.</p>
       </div>
     </form>
 
     <div id="codSuccess" class="hidden reveal mt-10 bg-forest-900 text-ivory-100 rounded-2xl p-8 text-center">
       <p class="text-3xl mb-2">🍯</p>
       <h3 class="font-display font-semibold text-xl">Terima kasih, pesanan Anda diterima!</h3>
-      <p class="text-ivory-200/70 text-sm mt-2">Tim kami akan segera menghubungi <span id="codWaEcho" class="text-honey-400 font-semibold"></span> via WhatsApp untuk konfirmasi paket dan alamat pengiriman.</p>
+      <p class="text-ivory-200/70 text-sm mt-2">Kami sudah membuka WhatsApp dengan detail pesanan Anda. Silakan kirim pesan tersebut agar tim kami bisa segera memprosesnya.</p>
     </div>
   </div>
 </section>
@@ -542,18 +451,19 @@
     <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-ivory-100/10">
       <a href="#top" class="flex items-center gap-2.5">
         <span class="hex bg-honey-500 w-8 h-9 flex items-center justify-center text-forest-900 text-sm">🐝</span>
-        <span class="font-display font-semibold text-lg text-ivory-100">HoneyDrop</span>
+        <span class="font-display font-semibold text-lg text-ivory-100">Lahanay</span>
       </a>
       <div class="flex items-center gap-6 text-ivory-200/70 text-sm">
         <a href="#manfaat" class="hover:text-honey-400 transition-colors">Manfaat</a>
-        <a href="#paket" class="hover:text-honey-400 transition-colors">Paket Harga</a>
+        <a href="#paket" class="hover:text-honey-400 transition-colors">Harga</a>
         <a href="#pesan" class="hover:text-honey-400 transition-colors">Pemesanan</a>
+        <a href="artikel/index.html" class="hover:text-honey-400 transition-colors">Artikel</a>
       </div>
     </div>
     <p class="text-ivory-300/40 text-xs mt-8 leading-relaxed max-w-3xl">
-      Produk ini bukan obat dan tidak dimaksudkan untuk mendiagnosis, mengobati, menyembuhkan, atau mencegah penyakit apa pun. Testimoni pelanggan bersifat pengalaman pribadi dan ilustratif. Halaman ini merupakan contoh desain sales page statis.
+      Produk ini bukan obat dan tidak dimaksudkan untuk mendiagnosis, mengobati, menyembuhkan, atau mencegah penyakit apa pun.
     </p>
-    <p class="text-ivory-300/30 text-xs mt-4">© 2026 HoneyDrop. Seluruh hak cipta dilindungi.</p>
+    <p class="text-ivory-300/30 text-xs mt-4">© 2026 Lahanay. Seluruh hak cipta dilindungi.</p>
   </div>
 </footer>
 
@@ -568,14 +478,35 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
   }
 
-  // Fictional COD form — front-end only, no real backend/payment processing
+  // Order form — builds a prefilled WhatsApp message from the form fields and opens it.
+  // No real backend: WhatsApp is the order-confirmation channel.
+  const LAHANAY_WA_NUMBER = '6289621566266'; // 62 = Indonesia country code, leading 0 dropped
+  const HARGA_PER_BOTOL = 115000;
+
   const codForm = document.getElementById('codForm');
   const codSuccess = document.getElementById('codSuccess');
-  const codWaEcho = document.getElementById('codWaEcho');
+
   codForm.addEventListener('submit', function(e){
     e.preventDefault();
+    const nama = document.getElementById('nama').value.trim();
     const wa = document.getElementById('wa').value.trim();
-    codWaEcho.textContent = wa || 'Anda';
+    const jumlah = parseInt(document.getElementById('jumlah').value, 10) || 1;
+    const alamat = document.getElementById('alamat').value.trim();
+    const catatan = document.getElementById('catatan').value.trim();
+    const total = jumlah * HARGA_PER_BOTOL;
+
+    let pesan = `Halo Lahanay, saya ingin memesan:\n\n`;
+    pesan += `Nama: ${nama}\n`;
+    pesan += `No. WhatsApp: ${wa}\n`;
+    pesan += `Jumlah: ${jumlah} botol Madu Kelulut Lahanay (250gr)\n`;
+    pesan += `Total: Rp ${total.toLocaleString('id-ID')}\n`;
+    pesan += `Alamat: ${alamat}\n`;
+    if (catatan) pesan += `Catatan: ${catatan}\n`;
+    pesan += `\nMohon konfirmasi pesanan saya. Terima kasih.`;
+
+    const waUrl = `https://wa.me/${LAHANAY_WA_NUMBER}?text=${encodeURIComponent(pesan)}`;
+    window.open(waUrl, '_blank');
+
     codForm.classList.add('hidden');
     codSuccess.classList.remove('hidden');
     codSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
