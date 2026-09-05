@@ -20,11 +20,11 @@ OUTPUT_ROBOTS = os.path.join(ROOT_DIR, "robots.txt")
 
 # File/folder yang di-skip saat scan
 EXCLUDE_FILES = {"template-artikel.html"}
-EXCLUDE_DIRS = {".git", "assets", "images", "node_modules"}
+EXCLUDE_DIRS = {".git", "assets", "data", "images", "node_modules", "sumber"}
 
 # Set True kalau baru ganti desain besar-besaran dan mau semua
 # tanggal lastmod di-reset ke hari ini
-FORCE_RESET = False
+FORCE_RESET = True
 
 # Prioritas per jenis halaman (opsional, membantu crawler)
 PRIORITY_HOME = "1.0"

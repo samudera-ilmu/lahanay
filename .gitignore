@@ -1,0 +1,14 @@
+# ===== EXCLUDE FOLDER =====
+sumber/
+data/
+
+# ===== EXCLUDE FILE =====
+x.py
+sitemap.py
+
+# ===== OPTIONAL (aman buat python & windows) =====
+__pycache__/
+*.pyc
+*.log
+Thumbs.db
+.DS_Store
