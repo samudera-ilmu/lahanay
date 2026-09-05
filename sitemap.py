@@ -24,7 +24,7 @@ EXCLUDE_DIRS = {".git", "assets", "data", "images", "node_modules", "sumber"}
 
 # Set True kalau baru ganti desain besar-besaran dan mau semua
 # tanggal lastmod di-reset ke hari ini
-FORCE_RESET = True
+FORCE_RESET = False
 
 # Prioritas per jenis halaman (opsional, membantu crawler)
 PRIORITY_HOME = "1.0"
